@@ -73,7 +73,8 @@ class App:
             try:
                 line1 = sig.live_plotter(x_vec,y_vec,line1)
                 y_vec = np.append(y_vec[1:],0.0)
-            except:
+            except Exception as e:
+                print('ERROR (this will not cause a crash unless it is really really bad...):\n{}'.format(e))
                 pass
 
     def check_start(self):
